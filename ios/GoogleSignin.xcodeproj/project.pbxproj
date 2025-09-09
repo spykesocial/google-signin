@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* GoogleSignin.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* GoogleSignin.m */; };
-
+		F815B759D97CDFBEFE1103DB /* Pods_GoogleSignin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4906576731FBC6EBBAF8A631 /* Pods_GoogleSignin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,10 +24,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libGoogleSignin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleSignin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
+		136BF03921428484925F3468 /* Pods-GoogleSignin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignin.debug.xcconfig"; path = "Target Support Files/Pods-GoogleSignin/Pods-GoogleSignin.debug.xcconfig"; sourceTree = "<group>"; };
+		4906576731FBC6EBBAF8A631 /* Pods_GoogleSignin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleSignin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C348D8ACD4D555CDE18828B /* Pods-GoogleSignin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignin.release.xcconfig"; path = "Target Support Files/Pods-GoogleSignin/Pods-GoogleSignin.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* GoogleSignin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleSignin.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* GoogleSignin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleSignin.m; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +36,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F815B759D97CDFBEFE1103DB /* Pods_GoogleSignin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011E986AC237AFCFC089F895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4906576731FBC6EBBAF8A631 /* Pods_GoogleSignin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		134814211AA4EA7D00B7C361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +62,22 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
 				B3E7B5881CC2AC0600A0062D /* GoogleSignin.h */,
 				B3E7B5891CC2AC0600A0062D /* GoogleSignin.m */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				67DAD6839D8FD89F42112011 /* Pods */,
+				011E986AC237AFCFC089F895 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		67DAD6839D8FD89F42112011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				136BF03921428484925F3468 /* Pods-GoogleSignin.debug.xcconfig */,
+				5C348D8ACD4D555CDE18828B /* Pods-GoogleSignin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,6 +87,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "GoogleSignin" */;
 			buildPhases = (
+				33DA969D967ACB6C6CDC8EE0 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -114,14 +133,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33DA969D967ACB6C6CDC8EE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleSignin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				B3E7B58A1CC2AC0600A0062D /* GoogleSignin.m in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +264,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 136BF03921428484925F3468 /* Pods-GoogleSignin.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -234,12 +276,12 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = GoogleSignin;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C348D8ACD4D555CDE18828B /* Pods-GoogleSignin.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -251,7 +293,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = GoogleSignin;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Release;
 		};
